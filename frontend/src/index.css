@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  /* Dynamic App Styling: Glassmorphism and Effects */
+  .glass-header {
+    @apply bg-white/70 backdrop-blur-md border-b border-white/20 sticky top-0 z-50;
+  }
+  
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-lg border border-white/20 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 rounded-2xl;
+  }
+
+  .interactive-button {
+    @apply relative overflow-hidden active:scale-95 transition-transform duration-200 font-medium tracking-wide rounded-full;
+  }
+
+  .primary-gradient {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-900 text-white shadow-md hover:shadow-lg transition-all;
+  }
+
+  .badge-category {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-900;
+  }
+}
